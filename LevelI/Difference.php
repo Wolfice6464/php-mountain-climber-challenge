@@ -19,7 +19,8 @@ class Difference
     {
         $this->a = $a;
         $this->b = $b;
-        $this->cost = $this->whatIsTheCostPlease($a, $b);
+        $this->cost = levenshtein($a, $b);
+        //$this->whatIsTheCostPlease($a, $b);
     }
 
     /**
