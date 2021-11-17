@@ -23,17 +23,22 @@ class MaxiInteger
         if (is_null($other)) {
             return $this;
         }
+        else {
+            $otherValue = $other->getValue();
+            $this->value += $otherValue;
+        }
+        return $this;
 
         /**
          * You can delete this part of the code
-         */
-        $maxLength = max(strlen($this->getValue()), strlen($other->getValue()));
-        if ($maxLength) {
-            $other = $other->fillWithZero($maxLength);
-            $this->setValue($this->fillWithZero($maxLength)->getValue());
-        }
-
-        return $this->realSum($this, $other);
+         
+        *$maxLength = max(strlen($this->getValue()), strlen($other->getValue()));
+        *if ($maxLength) {
+        *    $other = $other->fillWithZero($maxLength);
+        *    $this->setValue($this->fillWithZero($maxLength)->getValue());
+        *}
+        *return $this->realSum($this, $other);
+        */
     }
 
     /**
