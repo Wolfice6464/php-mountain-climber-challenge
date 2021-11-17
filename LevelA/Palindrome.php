@@ -1,14 +1,6 @@
 <?php
-
 namespace Hackathon\LevelA;
 
-// $str = 'abc';
-// $result = $str;
-// $len = strlen($str) - 1;
-// for($i = $len; $i >= 0; $i--)
-//     $result .= $str[$i];
-// echo $result;
-// echo "\n";
 
 class Palindrome
 {
@@ -28,13 +20,10 @@ class Palindrome
      */
     public function generatePalindrome()
     {
+        $str = utf8_decode($this->str);
         $result = $str;
-        $len = strlen($str) - 1;
-        for($i = $len; $i >= 0; $i--)
-            $result .= $str[$i];
-        // echo $result;
-        // echo "\n";
-        return $result;
+        $result .= strrev($str);
+        return utf8_encode($result);
     }
 
 }
