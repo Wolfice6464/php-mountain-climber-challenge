@@ -2,6 +2,14 @@
 
 namespace Hackathon\LevelA;
 
+// $str = 'abc';
+// $result = $str;
+// $len = strlen($str) - 1;
+// for($i = $len; $i >= 0; $i--)
+//     $result .= $str[$i];
+// echo $result;
+// echo "\n";
+
 class Palindrome
 {
     private $str;
@@ -20,9 +28,13 @@ class Palindrome
      */
     public function generatePalindrome()
     {
-        /** @TODO */
-
-        return 'abccba';
+        $result = $str;
+        $len = strlen($str) - 1;
+        for($i = $len; $i >= 0; $i--)
+            $result .= $str[$i];
+        // echo $result;
+        // echo "\n";
+        return $result;
     }
 
 }
